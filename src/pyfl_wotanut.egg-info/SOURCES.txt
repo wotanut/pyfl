@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/pyfl/__init__.py
+src/pyfl/main.py
+src/pyfl_wotanut.egg-info/PKG-INFO
+src/pyfl_wotanut.egg-info/SOURCES.txt
+src/pyfl_wotanut.egg-info/dependency_links.txt
+src/pyfl_wotanut.egg-info/top_level.txt
