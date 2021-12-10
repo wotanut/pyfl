@@ -4,7 +4,7 @@ This package is very much a WIP, please bear with me while I develop it
 
 ## Features
 - Active python library developed specifically for the TFL API
-- syncrhonous
+- Asynchronous
 - Object Orientated Code
 
 ## Installation

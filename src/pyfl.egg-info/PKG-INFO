@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pyfl
+Version: 0.0.1
+Summary: A python library that takes information from the Transport For London API
+Home-page: https://github.com/wotanut/pyfl
+Author: wotanut
+Author-email: wotanutt@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/wotanut/pyfl/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# WIP Package
+
+This package is very much a WIP, please bear with me while I develop it
+
+## Features
+- Active python library developed specifically for the TFL API
+- Asynchronous
+- Object Orientated Code
+
+## Installation
+
+To install the latest and most stable version:
+```
+pip install pyfl
+```
+
+To install the development version (not recommended):
+```
+pip install git+https://github.com/wotanut/pyfl.git
+```
+
+Or via git
+```
+git clone https://github.com/wotanut/pyfl
+```
+
+## Useful links
+there are none yet
+
+
