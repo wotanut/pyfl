@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pyfl
-Version: 0.0.1
+Version: 0.0.2
 Summary: A python library that takes information from the Transport For London API
 Home-page: https://github.com/wotanut/pyfl
 Author: wotanut
