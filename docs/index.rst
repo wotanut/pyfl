@@ -6,6 +6,12 @@
 Welcome to pyfl's documentation!
 ================================
 
+.. autosummary::
+   :toctree: DIRNAME
+
+   sphinx.environment.BuildEnvironment
+   sphinx.util.relative_uri
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -22,5 +28,8 @@ Features
 Getting Started
 ==================
 
-* :ref:`quickstart`
+.. * :ref:`quickstart`
+.. * :ref:`api reference`
 * :ref:`search`
+
+.. warning:: this package is under development

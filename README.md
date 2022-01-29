@@ -1,10 +1,12 @@
+[![tests](https://github.com/wotanut/pyfl/actions/workflows/test.yml/badge.svg?branch=main&event=push)](https://github.com/wotanut/pyfl/actions/workflows/test.yml)
+
 # WIP Package
 
 This package is very much a WIP, please bear with me while I develop it
 
 ## Features
 - Active python library developed specifically for the TFL API
-- Asynchronous
+- syncrhonous
 - Object Orientated Code
 
 ## Installation

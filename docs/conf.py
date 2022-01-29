@@ -28,10 +28,16 @@ author = 'wotanut'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "sphinx.ext.autodoc",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.viewcode",
+    "sphinx.ext.autosummary",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
+
+autosummary_generate = True
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
