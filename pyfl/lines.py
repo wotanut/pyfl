@@ -21,6 +21,6 @@ class line(TFL):
   Jubilee = "jubilee"
   Victoria = "victoria"
   Overground = "london-overground"
-  TfL-Rail = "tfl-rail"
+  TFL_Rail = "tfl-rail"
   Tram = "tram"
   Tube = "tube"
