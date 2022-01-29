@@ -1,3 +1,5 @@
+[![tests](https://github.com/wotanut/pyfl/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/wotanut/pyfl/actions/workflows/test.yml)
+
 # WIP Package
 
 This package is very much a WIP, please bear with me while I develop it
