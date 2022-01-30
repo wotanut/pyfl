@@ -3,14 +3,16 @@ import os
 
 def test_tube():
 	"""Tests an API call to get a tube lines status"""
+	
+	token = os.getenv("TFL_API_TOKEN")
 
 	# tests getting the API key
 
-	tflapi = TFL(${{ secrets.TFL_API_TOKEN }})
+	tflapi = TFL(token)
 	response = tflapi.api_key
 
 	assert isinstance(response, str)
-	assert response == ${{ secrets.TFL_API_TOKEN }}, "The ID should be in the response"
+	assert response ==token, "The ID should be in the response"
 
 	# tests the victoria line attribute
 
@@ -20,5 +22,5 @@ def test_tube():
 
 	# tests a call to the api
 
-	tube = underground(api_key=os.getenv("TFL_API_TOKEN"))
+	tube = underground(api_key=token)
 	print(tube.getLineStatus(route=line.Victoria))
