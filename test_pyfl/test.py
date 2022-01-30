@@ -6,11 +6,11 @@ def test_tube():
 
 	# tests getting the API key
 
-	tflapi = TFL(os.getenv("TFL_API_TOKEN"))
+	tflapi = TFL(${{ secrets.TFL_API_TOKEN }})
 	response = tflapi.api_key
 
 	assert isinstance(response, str)
-	assert response == os.getenv("TFL_API_TOKEN"), "The ID should be in the response"
+	assert response == ${{ secrets.TFL_API_TOKEN }}, "The ID should be in the response"
 
 	# tests the victoria line attribute
 
