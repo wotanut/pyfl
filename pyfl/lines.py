@@ -1,4 +1,4 @@
-from .tfl import TFL
+from pyfl.tfl import TFL
 
 class line(TFL):
   """

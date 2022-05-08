@@ -1,3 +1,3 @@
-from .tube import underground
-from .tfl import TFL
-from .lines import line
+from pyfl.tube import underground
+from pyfl.tfl import TFL
+from prfl.lines import line

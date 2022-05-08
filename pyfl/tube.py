@@ -1,5 +1,5 @@
-from .tfl import TFL
-from .lines import line
+from pyfl.tfl import TFL
+from pyfl.lines import line
 
 class underground(TFL):
   """
