@@ -13,4 +13,4 @@ class TFL( object ):
   """
   def __init__(self,api_key: str):
     self.api_key = api_key
-    self.tube = underground(api_key=key)
+    self.tube = underground(api_key=api_key)
