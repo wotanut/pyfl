@@ -1,13 +1,12 @@
-from pyfl.tfl import TFL
 from pyfl.lines import line
+from pyfl.helper import helper
 
-class underground(TFL):
+class underground():
   """
   represents every action related to the underground
   """
   def __init__(self,api_key):
     self.api_key = api_key
-#    TFL.__init__(self,api_key=api_key)
 
   def getLineStatus(self,route: line):
     """
@@ -19,4 +18,4 @@ class underground(TFL):
     :rtype: str
 
     """
-    return TFL(api_key=self.api_key).send_request(url=f"Line/Mode/{route}/Status")
+    return helper(api_key=self.api_key).send_request(url=f"Line/Mode/{route}/Status")

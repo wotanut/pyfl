@@ -1,12 +1,7 @@
-from pyfl.tfl import TFL
-
-class line(TFL):
+class line():
   """
   Helper class to allow you to write line.Victoria instead of having to write it's line ID each time
   """
-  def __init__(self):
-    TFL.__init__(self,api_key)
-
   Victoria = "victoria"
   Central = "central"
   District = "district"
