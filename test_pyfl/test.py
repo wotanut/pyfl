@@ -1,4 +1,4 @@
-from pyfl import TFL, underground, line
+from pyfl import TFL,line
 import os
 
 def test_tube():
@@ -22,5 +22,4 @@ def test_tube():
 
 	# tests a call to the api
 
-	tube = underground(api_key=token)
-	print(tube.getLineStatus(route=line.Victoria))
+	print(tflapi.tube.getLineStatus(route=line.Victoria))
