@@ -5,7 +5,7 @@ import json
 
 from pyfl.tube import underground
 from pyfl.helper import helper
-from pyfl.line import line 
+from pyfl.lines import line 
 
 class TFL( object ):
   """
