@@ -1,6 +1,6 @@
 # local imports
-from errors import *
-from helper import Helper
+from .errors import *
+from .helper import Helper
 
 class LU():
     """ Line class"""
