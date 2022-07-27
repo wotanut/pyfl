@@ -8,7 +8,7 @@ def test_tube():
 
 	# tests getting the API key
 
-	TFL = client(token)
+	TFL = client.pyfl(token)
 	response = TFL.api_key
 
 	assert isinstance(response, str)
