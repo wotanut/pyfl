@@ -2,9 +2,9 @@
 import requests
 
 # local imports
-from errors import *
-from helper import Helper
-from tube import LU
+from .errors import *
+from .helper import Helper
+from .tube import LU
 
 class pyfl():
     """Base PYFL class"""
