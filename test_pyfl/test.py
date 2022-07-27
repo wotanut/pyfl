@@ -1,4 +1,4 @@
-from pyfl import TFL,line
+from pyfl import client
 import os
 
 def test_tube():
@@ -8,18 +8,14 @@ def test_tube():
 
 	# tests getting the API key
 
-	tflapi = TFL(token)
-	response = tflapi.api_key
+	TFL = client(token)
+	response = TFL.api_key
 
 	assert isinstance(response, str)
 	assert response ==token, "The ID should be in the response"
 
 	# tests the victoria line attribute
 
-	Victoria = line.Victoria
+	Victoria = TFL.helper.victoria()
 	assert isinstance(Victoria, str)
 	assert Victoria == "victoria", "This should be an attribute for the underground"
-
-	# tests a call to the api
-
-	print(tflapi.tube.getLineStatus(route=line.Victoria))

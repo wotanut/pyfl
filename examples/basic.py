@@ -1,11 +1,8 @@
-import pyfl
-from pyfl import TFL, underground, line
+from pyfl import client
 import os
 
-key = os.getenv(api_key)
+key = os.getenv("api_key")
 
-tflapi = TFL(api_key=key)
-tube = underground(api_key=key)
+TFL = client(key)
 
-print(tube.getLineStatus(line.Victoria))
-print(tube.getLineStatus(line.DLR))
+print(TFL.tube.get_line_status(TFL.helper.victoria()))
