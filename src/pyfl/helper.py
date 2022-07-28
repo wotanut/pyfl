@@ -1,6 +1,7 @@
 import requests
 
 class Helper():
+    victoria = "victoria"
     def __init__(self):
         pass
 
@@ -9,6 +10,6 @@ class Helper():
         r = requests.get("https://api.tfl.gov.uk/" + endpoint)
         return r.json()
 
-    @staticmethod
-    def victoria():
-        return "victoria"
+    #@staticmethod
+    #def victoria():
+    #    return "victoria"
