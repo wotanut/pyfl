@@ -7,15 +7,8 @@ REM Command file for Sphinx documentation
 if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=sphinx-build
 )
-<<<<<<< HEAD
-set SOURCEDIR=.
-set BUILDDIR=_build
-=======
 set SOURCEDIR=source
 set BUILDDIR=build
->>>>>>> f5d20136492489a65fc3fc5e3220c6a66007b813
-
-if "%1" == "" goto help
 
 %SPHINXBUILD% >NUL 2>NUL
 if errorlevel 9009 (
@@ -29,6 +22,8 @@ if errorlevel 9009 (
 	echo.https://www.sphinx-doc.org/
 	exit /b 1
 )
+
+if "%1" == "" goto help
 
 %SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
 goto end

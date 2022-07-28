@@ -11,4 +11,4 @@ class LU():
     def get_line_status(self, line:str):
         """ Get the status of a line """
         endpoint = f"/line/{line}/status"
-        return Helper.make_raw_api_call(endpoint)
+        return Helper.remove_crap(Helper.make_raw_api_call(endpoint))
