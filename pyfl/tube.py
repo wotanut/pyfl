@@ -1,21 +1,14 @@
-from pyfl.lines import line
-from pyfl.helper import helper
+# local imports
+from .errors import *
+from .helper import Helper
 
-class underground():
-  """
-  represents every action related to the underground
-  """
-  def __init__(self,api_key):
-    self.api_key = api_key
+class LU():
+    """ Line class"""
+    def __init__(self):
+        """ Initialise the Line class """
+        pass
 
-  def getLineStatus(self,route: line):
-    """
-    Return the status of a line as string as strings.
-
-    :param kind: the tube line to get the status of.
-    :type kind: pyfl.line
-    :return: The status of the line.
-    :rtype: str
-
-    """
-    return helper(api_key=self.api_key).send_request(url=f"Line/Mode/{route}/Status")
+    def get_line_status(self, line:Helper):
+        """ Get the status of a line """
+        endpoint = f"/line/{line}/status"
+        return Helper.make_raw_api_call(endpoint)
