@@ -8,7 +8,7 @@ class LU():
         """ Initialise the Line class """
         pass
 
-    def get_line_status(self, line:Helper):
+    def get_line_status(self, line:str):
         """ Get the status of a line """
         endpoint = f"/line/{line}/status"
         return Helper.make_raw_api_call(endpoint)

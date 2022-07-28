@@ -6,7 +6,7 @@ from .errors import *
 from .helper import Helper
 from .tube import LU
 
-class pyfl():
+class client():
     """Base PYFL class"""
     def __init__(self, api_key):
         """ Initialise the PYFL class """
