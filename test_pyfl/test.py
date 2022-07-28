@@ -8,7 +8,7 @@ def test_tube():
 
 	# tests getting the API key
 
-	TFL = client.pyfl(token)
+	TFL = client(token)
 	response = TFL.api_key
 
 	assert isinstance(response, str)
@@ -16,6 +16,6 @@ def test_tube():
 
 	# tests the victoria line attribute
 
-	Victoria = TFL.helper.victoria()
+	Victoria = TFL.helper.victoria
 	assert isinstance(Victoria, str)
 	assert Victoria == "victoria", "This should be an attribute for the underground"
