@@ -13,7 +13,7 @@ class Helper():
 
     @staticmethod
     def remove_crap(json_data):
-        """A lot of the TFL API returns a lot of crap, this function removes it"""
+        """A lot of the TFL API returns a lot of crap, this function removes it..."""
         return json_data[0]
 
     #@staticmethod

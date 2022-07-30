@@ -24,14 +24,25 @@ extensions = ['sphinx.ext.autosectionlabel',
                 'sphinx.ext.duration',
                 'sphinx.ext.doctest',
                 'sphinx.ext.autodoc',
-                'sphinx.ext.autosummary'
+                'sphinx.ext.autosummary',
+                'sphinx.ext.extlinks'
               ]
 
 templates_path = ['_templates']
 exclude_patterns = []
+add_module_names = False
+autodoc_member_order = 'bysource'
+autodoc_typehints = 'none'
 
+extlinks = {
+
+}
+
+master_doc = 'index'
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = "sphinx_rtd_theme"
-html_static_path = ['_static']
+#html_static_path = ['_static']
+#html_logo = 
+#html_favicon =

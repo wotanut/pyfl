@@ -7,7 +7,6 @@ from .helper import Helper
 from .tube import LU
 
 class client():
-    """Base PYFL class"""
     def __init__(self, api_key):
         """
         Creates the client object
