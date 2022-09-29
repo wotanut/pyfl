@@ -16,4 +16,4 @@ class AirQuality():
         :rtype: str
         """
         endpoint = f"/AirQuality"
-        return Helper.parse(Helper.make_raw_api_call(endpoint))
+        return Helper.make_raw_api_call(endpoint)
