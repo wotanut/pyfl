@@ -34,3 +34,8 @@ def test_tube():
 
 	response = TFL.helper.parse(TFL.helper.make_raw_api_call("/line/victoria/status"))
 	assert isinstance(response, dict)
+
+	# tests airquality.py
+
+	response = TFL.AirQuality.get_air_quality()
+	assert isinstance(response,dict)

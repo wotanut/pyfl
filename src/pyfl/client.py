@@ -6,6 +6,7 @@ from .errors import *
 from .helper import Helper
 from .tube import LU
 from .accident import Accident
+from .airquality import AirQuality
 
 class client():
     def __init__(self, api_key):
@@ -22,3 +23,4 @@ class client():
         self.tube = LU()
         self.helper = Helper()
         self.accident = Accident()
+        self.AirQuality = AirQuality()
