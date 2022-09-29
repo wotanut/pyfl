@@ -1,1 +1,1 @@
-# run this in hte source directory sphinx-apidoc -o .. ../../src/pyfl
+# run this in the source directory sphinx-apidoc -o .. ../../src/pyfl
