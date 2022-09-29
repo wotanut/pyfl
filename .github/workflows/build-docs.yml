@@ -4,7 +4,6 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -23,4 +22,11 @@ jobs:
         sphinx-apidoc -o docs/source/ src/pyfl/
         cd /docs
         make html
-  - uses: stefanzweifel/git-auto-commit-action@v4
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update docs
+        commit_options: '--no-verify'
+        commit_user_name: GitHub Actions
+        commit_user_email: github-actions[bot]@users.noreply.github.com
+        commit_author: GitHub Actions <github-actions[bot]@users.noreply.github.com>
+        file_pattern: docs
