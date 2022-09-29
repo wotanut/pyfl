@@ -1,0 +1,32 @@
+name: build_docs
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install sphinx
+        pip install sphinx_rtd_theme
+        pip install .
+    - name: Make the docs
+      run: |
+        sphinx-apidoc -o docs/source/ src/pyfl/
+        cd docs/
+        make html
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update docs
+        commit_options: '--no-verify'
+        commit_user_name: GitHub Actions
+        commit_user_email: github-actions[bot]@users.noreply.github.com
+        commit_author: GitHub Actions <github-actions[bot]@users.noreply.github.com>
+        file_pattern: docs

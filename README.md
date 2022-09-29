@@ -1,9 +1,5 @@
 [![tests](https://github.com/wotanut/pyfl/actions/workflows/test.yml/badge.svg?branch=main&event=push)](https://github.com/wotanut/pyfl/actions/workflows/test.yml)
 
-# WIP Package
-
-This package is very much a WIP, please bear with me while I develop it
-
 ## Features
 - Active python library developed specifically for the TFL API
 - syncrhonous
@@ -27,4 +23,7 @@ git clone https://github.com/wotanut/pyfl
 ```
 
 ## Useful links
-there are none yet
+- [PyPI](https://pypi.org/project/pyfl/)
+- [Documentation](https://pyflib.readthedocs.io/en/latest/)
+- [Discord Server](https://discord.gg/2w5KSXjhGe)
+- [Watch me live stream the code here](https://www.youtube.com/channel/UCIVkp1F5JSyE0IKALyPW5sg)

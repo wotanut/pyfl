@@ -4,26 +4,42 @@ pyfl package
 Submodules
 ----------
 
-pyfl.lines module
------------------
+pyfl.accident module
+--------------------
 
-.. automodule:: pyfl.lines
+.. automodule:: pyfl.accident
    :members:
    :undoc-members:
    :show-inheritance:
 
-pyfl.test module
-----------------
+pyfl.airquality module
+----------------------
 
-.. automodule:: pyfl.test
+.. automodule:: pyfl.airquality
    :members:
    :undoc-members:
    :show-inheritance:
 
-pyfl.tfl module
----------------
+pyfl.client module
+------------------
 
-.. automodule:: pyfl.tfl
+.. automodule:: pyfl.client
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyfl.errors module
+------------------
+
+.. automodule:: pyfl.errors
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyfl.helper module
+------------------
+
+.. automodule:: pyfl.helper
    :members:
    :undoc-members:
    :show-inheritance:

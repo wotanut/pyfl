@@ -19,3 +19,23 @@ def test_tube():
 	Victoria = TFL.helper.victoria
 	assert isinstance(Victoria, str)
 	assert Victoria == "victoria", "This should be an attribute for the underground"
+
+	# tests tube.py
+
+	response = TFL.tube.get_line_status("victoria")
+	assert isinstance(response, dict)
+
+	# tests accident.py
+
+	response = TFL.accident.get_accident_stats(2019)
+	assert isinstance(response, dict)
+
+	# tests helper.py
+
+	response = TFL.helper.parse(TFL.helper.make_raw_api_call("/line/victoria/status"))
+	assert isinstance(response, dict)
+
+	# tests airquality.py
+
+	response = TFL.AirQuality.get_air_quality()
+	assert isinstance(response,dict)
