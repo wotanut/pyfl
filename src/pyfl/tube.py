@@ -18,7 +18,7 @@ class LU():
         :rtype: str
         """
         endpoint = f"/line/{line}/status"
-        return Helper.remove_crap(Helper.make_raw_api_call(endpoint))
+        return Helper.parse(Helper.make_raw_api_call(endpoint))
 
     def tmp(self):
         """

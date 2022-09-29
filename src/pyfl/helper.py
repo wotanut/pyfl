@@ -1,4 +1,5 @@
 import requests
+from .errors import *
 
 class Helper():
     victoria = "victoria"
@@ -8,11 +9,15 @@ class Helper():
     @staticmethod
     def make_raw_api_call(endpoint):
         """ Make a raw API call to the TFL API """
-        r = requests.get("https://api.tfl.gov.uk/" + endpoint)
+        try:
+            r = requests.get("https://api.tfl.gov.uk/" + endpoint)
+        except Exception as e:
+            raise invalid_response(f"Invalid response from TFL API: {e}")
+            return
         return r.json()
 
     @staticmethod
-    def remove_crap(json_data):
+    def parse(json_data):
         """A lot of the TFL API returns a lot of crap, this function removes it..."""
         return json_data[0]
 
