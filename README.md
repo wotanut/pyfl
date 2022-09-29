@@ -24,6 +24,6 @@ git clone https://github.com/wotanut/pyfl
 
 ## Useful links
 - [PyPI](https://pypi.org/project/pyfl/)
-- [Documentation](hthttps://pyflib.readthedocs.io/en/latest/)
+- [Documentation](https://pyflib.readthedocs.io/en/latest/)
 - [Discord Server](https://discord.gg/2w5KSXjhGe)
 - [Watch me live stream the code here](https://www.youtube.com/channel/UCIVkp1F5JSyE0IKALyPW5sg)

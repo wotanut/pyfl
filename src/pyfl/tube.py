@@ -19,9 +19,3 @@ class LU():
         """
         endpoint = f"/line/{line}/status"
         return Helper.parse(Helper.make_raw_api_call(endpoint))
-
-    def tmp(self):
-        """
-        tmp
-        """
-        return "tmp"
