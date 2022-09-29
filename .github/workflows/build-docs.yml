@@ -20,7 +20,7 @@ jobs:
     - name: Make the docs
       run: |
         sphinx-apidoc -o docs/source/ src/pyfl/
-        cd /docs
+        cd docs/
         make html
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
