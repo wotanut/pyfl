@@ -69,5 +69,5 @@ def test_tube():
 	response = TFL.mode.get_mode()
 	assert isinstance(response,dict)
 
-	response TFL.mode.get_arrival_predictions("tube")
+	response = TFL.mode.get_arrival_predictions("tube")
 	assert isinstance(response,dict)
