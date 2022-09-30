@@ -8,3 +8,4 @@ from .air import *
 from .bikePoint import *
 from .cabWise import *
 from .journeys import *
+from .mode import *
