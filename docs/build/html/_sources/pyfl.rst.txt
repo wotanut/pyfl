@@ -68,6 +68,14 @@ pyfl.journeys module
    :undoc-members:
    :show-inheritance:
 
+pyfl.mode module
+----------------
+
+.. automodule:: pyfl.mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 pyfl.tube module
 ----------------
 
