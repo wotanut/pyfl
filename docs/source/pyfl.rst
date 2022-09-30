@@ -12,10 +12,18 @@ pyfl.accident module
    :undoc-members:
    :show-inheritance:
 
-pyfl.airquality module
-----------------------
+pyfl.air module
+---------------
 
-.. automodule:: pyfl.airquality
+.. automodule:: pyfl.air
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyfl.bikePoint module
+---------------------
+
+.. automodule:: pyfl.bikePoint
    :members:
    :undoc-members:
    :show-inheritance:
