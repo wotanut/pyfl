@@ -56,6 +56,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#pyfl.bikePoint.bike"><code class="docutils literal notranslate"><span class="pre">bike</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pyfl.cabWise">pyfl.cabWise module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyfl.cabWise.cab"><code class="docutils literal notranslate"><span class="pre">cab</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#module-pyfl.client">pyfl.client module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#pyfl.client.client"><code class="docutils literal notranslate"><span class="pre">client</span></code></a></li>
 </ul>
@@ -215,6 +219,43 @@
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>the bike point.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyfl.cabWise">
+<span id="pyfl-cabwise-module"></span><h2>pyfl.cabWise module<a class="headerlink" href="#module-pyfl.cabWise" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyfl.cabWise.cab">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cab</span></span><a class="headerlink" href="#pyfl.cabWise.cab" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Cab class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.cabWise.cab.get_taxi_information">
+<span class="sig-name descname"><span class="pre">get_taxi_information</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">long</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wheelchair</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxResults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legacyFormat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twentyFourSevenOnly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.cabWise.cab.get_taxi_information" title="Permalink to this definition"></a></dt>
+<dd><p>Returns taxi and minicabs contact information</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lat</strong> (<em>float</em>) – latitude</p></li>
+<li><p><strong>long</strong> (<em>float</em>) – longitude</p></li>
+<li><p><strong>optype</strong> (<em>str</em>) – Operator Type e.g Minicab, Executive, Limousine</p></li>
+<li><p><strong>wheelchair</strong> (<em>bool</em>) – Wheelchair accessible</p></li>
+<li><p><strong>radius</strong> (<em>int</em>) – The radius in metres to search for operators</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The trading name of the operating company</p></li>
+<li><p><strong>maxResults</strong> (<em>int</em>) – max results to search for, defualts to 20</p></li>
+<li><p><strong>legacyFormat</strong> (<em>bool</em>) – Legacy format [NOT RECOMMENDED], defualts to False</p></li>
+<li><p><strong>twentyFourSevenOnly</strong> (<em>bool</em>) – To only search for operators which are 24/7, defualts to False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The taxi information.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>dict</p>
