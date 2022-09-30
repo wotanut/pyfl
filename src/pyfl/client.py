@@ -9,6 +9,7 @@ from .accident import Accident
 from .air import AirQuality
 from .bikePoint import bike
 from .cabWise import cab
+from .journeys import journeys
 
 class client():
     def __init__(self, api_key):
@@ -28,3 +29,4 @@ class client():
         self.AirQuality = AirQuality()
         self.bike = bike()
         self.cab = cab()
+        self.journey = journeys()
