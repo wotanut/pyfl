@@ -28,6 +28,14 @@ pyfl.bikePoint module
    :undoc-members:
    :show-inheritance:
 
+pyfl.cabWise module
+-------------------
+
+.. automodule:: pyfl.cabWise
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 pyfl.client module
 ------------------
 
@@ -48,6 +56,22 @@ pyfl.helper module
 ------------------
 
 .. automodule:: pyfl.helper
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyfl.journeys module
+--------------------
+
+.. automodule:: pyfl.journeys
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyfl.mode module
+----------------
+
+.. automodule:: pyfl.mode
    :members:
    :undoc-members:
    :show-inheritance:

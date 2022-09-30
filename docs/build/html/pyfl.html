@@ -56,6 +56,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#pyfl.bikePoint.bike"><code class="docutils literal notranslate"><span class="pre">bike</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pyfl.cabWise">pyfl.cabWise module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyfl.cabWise.cab"><code class="docutils literal notranslate"><span class="pre">cab</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#module-pyfl.client">pyfl.client module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#pyfl.client.client"><code class="docutils literal notranslate"><span class="pre">client</span></code></a></li>
 </ul>
@@ -70,6 +74,14 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-pyfl.helper">pyfl.helper module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#pyfl.helper.Helper"><code class="docutils literal notranslate"><span class="pre">Helper</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pyfl.journeys">pyfl.journeys module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyfl.journeys.journeys"><code class="docutils literal notranslate"><span class="pre">journeys</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pyfl.mode">pyfl.mode module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyfl.mode.Mode"><code class="docutils literal notranslate"><span class="pre">Mode</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-pyfl.tube">pyfl.tube module</a><ul>
@@ -225,6 +237,43 @@
 </dd></dl>
 
 </section>
+<section id="module-pyfl.cabWise">
+<span id="pyfl-cabwise-module"></span><h2>pyfl.cabWise module<a class="headerlink" href="#module-pyfl.cabWise" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyfl.cabWise.cab">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cab</span></span><a class="headerlink" href="#pyfl.cabWise.cab" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Cab class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.cabWise.cab.get_taxi_information">
+<span class="sig-name descname"><span class="pre">get_taxi_information</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">long</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wheelchair</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxResults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legacyFormat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twentyFourSevenOnly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.cabWise.cab.get_taxi_information" title="Permalink to this definition"></a></dt>
+<dd><p>Returns taxi and minicabs contact information</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lat</strong> (<em>float</em>) – latitude</p></li>
+<li><p><strong>long</strong> (<em>float</em>) – longitude</p></li>
+<li><p><strong>optype</strong> (<em>str</em>) – Operator Type e.g Minicab, Executive, Limousine</p></li>
+<li><p><strong>wheelchair</strong> (<em>bool</em>) – Wheelchair accessible</p></li>
+<li><p><strong>radius</strong> (<em>int</em>) – The radius in metres to search for operators</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The trading name of the operating company</p></li>
+<li><p><strong>maxResults</strong> (<em>int</em>) – max results to search for, defualts to 20</p></li>
+<li><p><strong>legacyFormat</strong> (<em>bool</em>) – Legacy format [NOT RECOMMENDED], defualts to False</p></li>
+<li><p><strong>twentyFourSevenOnly</strong> (<em>bool</em>) – To only search for operators which are 24/7, defualts to False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The taxi information.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 <section id="module-pyfl.client">
 <span id="pyfl-client-module"></span><h2>pyfl.client module<a class="headerlink" href="#module-pyfl.client" title="Permalink to this heading"></a></h2>
 <dl class="py class">
@@ -293,6 +342,95 @@
 <dt class="sig sig-object py" id="pyfl.helper.Helper.parse">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.helper.Helper.parse" title="Permalink to this definition"></a></dt>
 <dd><p>A lot of the TFL API returns a lot of crap, this function removes it…</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyfl.journeys">
+<span id="pyfl-journeys-module"></span><h2>pyfl.journeys module<a class="headerlink" href="#module-pyfl.journeys" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyfl.journeys.journeys">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">journeys</span></span><a class="headerlink" href="#pyfl.journeys.journeys" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Journey class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.journeys.journeys.get_available_modes">
+<span class="sig-name descname"><span class="pre">get_available_modes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.journeys.journeys.get_available_modes" title="Permalink to this definition"></a></dt>
+<dd><p>Get’s a list of all the available modes of transport</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The available modes of transport.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.journeys.journeys.perform_journey">
+<span class="sig-name descname"><span class="pre">perform_journey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fromcoord</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tocoord</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.journeys.journeys.perform_journey" title="Permalink to this definition"></a></dt>
+<dd><p>”
+Perform a journey between two points, note: there are many more parameters that need to be added to this function at a later date. Please refer to the docs for more information (<a class="reference external" href="https://api.tfl.gov.uk/swagger/ui/index.html?url=/swagger/docs/v1#!/Journey/Journey_JourneyResults">https://api.tfl.gov.uk/swagger/ui/index.html?url=/swagger/docs/v1#!/Journey/Journey_JourneyResults</a>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fromcoord</strong> (<em>str</em>) – The starting location</p></li>
+<li><p><strong>tocoord</strong> (<em>str</em>) – The destination</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The journey</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyfl.mode">
+<span id="pyfl-mode-module"></span><h2>pyfl.mode module<a class="headerlink" href="#module-pyfl.mode" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyfl.mode.Mode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Mode</span></span><a class="headerlink" href="#pyfl.mode.Mode" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Mode class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.mode.Mode.get_mode">
+<span class="sig-name descname"><span class="pre">get_mode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.mode.Mode.get_mode" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the service type for a given mode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The service type for a given mode.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.mode.Mode.get_arrival_predictions">
+<span class="sig-name descname"><span class="pre">get_arrival_predictions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.mode.Mode.get_arrival_predictions" title="Permalink to this definition"></a></dt>
+<dd><p>Get’s the arrival predictions for all stops of a given mode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mode</strong> (<em>str</em>) – The mode to get the arrival predictions for.</p></li>
+<li><p><strong>count</strong> (<em>int</em>) – The number of arrivals to return, defaults to -1 (all)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The arrival predictions.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

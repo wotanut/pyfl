@@ -50,3 +50,24 @@ def test_tube():
 
 	response = TFL.bike.get_bike_point_by_name("Baker Street")
 	assert isinstance(response,dict)
+
+	# tests cabWise.py
+
+	response = TFL.cab.get_taxi_information(51.5074,0.1278)
+	assert isinstance(response,dict)
+
+	# tests journeys.py
+
+	response = TFL.journey.get_available_modes()
+	assert isinstance(response,dict)
+
+	response = TFL.journey.perform_journey("51.5074","0.1278")
+	assert isinstance(response,dict)
+
+	# tests mode.py
+
+	response = TFL.mode.get_mode()
+	assert isinstance(response,dict)
+
+	response = TFL.mode.get_arrival_predictions("tube")
+	assert isinstance(response,dict)

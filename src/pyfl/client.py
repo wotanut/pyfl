@@ -8,6 +8,10 @@ from .tube import LU
 from .accident import Accident
 from .air import AirQuality
 from .bikePoint import bike
+from .cabWise import cab
+from .journeys import journeys
+from .mode import Mode
+
 class client():
     def __init__(self, api_key):
         """
@@ -25,3 +29,6 @@ class client():
         self.accident = Accident()
         self.AirQuality = AirQuality()
         self.bike = bike()
+        self.cab = cab()
+        self.journey = journeys()
+        self.mode = Mode()
