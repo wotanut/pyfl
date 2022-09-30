@@ -60,6 +60,14 @@ pyfl.helper module
    :undoc-members:
    :show-inheritance:
 
+pyfl.journeys module
+--------------------
+
+.. automodule:: pyfl.journeys
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 pyfl.tube module
 ----------------
 
