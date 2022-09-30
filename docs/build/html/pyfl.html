@@ -76,6 +76,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#pyfl.helper.Helper"><code class="docutils literal notranslate"><span class="pre">Helper</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pyfl.journeys">pyfl.journeys module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyfl.journeys.journeys"><code class="docutils literal notranslate"><span class="pre">journeys</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#module-pyfl.tube">pyfl.tube module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#pyfl.tube.LU"><code class="docutils literal notranslate"><span class="pre">LU</span></code></a></li>
 </ul>
@@ -334,6 +338,51 @@
 <dt class="sig sig-object py" id="pyfl.helper.Helper.parse">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.helper.Helper.parse" title="Permalink to this definition"></a></dt>
 <dd><p>A lot of the TFL API returns a lot of crap, this function removes it…</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyfl.journeys">
+<span id="pyfl-journeys-module"></span><h2>pyfl.journeys module<a class="headerlink" href="#module-pyfl.journeys" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyfl.journeys.journeys">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">journeys</span></span><a class="headerlink" href="#pyfl.journeys.journeys" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Journey class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.journeys.journeys.get_available_modes">
+<span class="sig-name descname"><span class="pre">get_available_modes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.journeys.journeys.get_available_modes" title="Permalink to this definition"></a></dt>
+<dd><p>Get’s a list of all the available modes of transport</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The available modes of transport.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.journeys.journeys.perform_journey">
+<span class="sig-name descname"><span class="pre">perform_journey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fromcoord</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tocoord</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.journeys.journeys.perform_journey" title="Permalink to this definition"></a></dt>
+<dd><p>”
+Perform a journey between two points, note: there are many more parameters that need to be added to this function at a later date. Please refer to the docs for more information (<a class="reference external" href="https://api.tfl.gov.uk/swagger/ui/index.html?url=/swagger/docs/v1#!/Journey/Journey_JourneyResults">https://api.tfl.gov.uk/swagger/ui/index.html?url=/swagger/docs/v1#!/Journey/Journey_JourneyResults</a>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fromcoord</strong> (<em>str</em>) – The starting location</p></li>
+<li><p><strong>tocoord</strong> (<em>str</em>) – The destination</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The journey</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
