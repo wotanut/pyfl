@@ -48,8 +48,12 @@
 <li class="toctree-l4"><a class="reference internal" href="#pyfl.accident.Accident"><code class="docutils literal notranslate"><span class="pre">Accident</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#module-pyfl.airquality">pyfl.airquality module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#pyfl.airquality.AirQuality"><code class="docutils literal notranslate"><span class="pre">AirQuality</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pyfl.air">pyfl.air module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyfl.air.AirQuality"><code class="docutils literal notranslate"><span class="pre">AirQuality</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pyfl.bikePoint">pyfl.bikePoint module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyfl.bikePoint.bike"><code class="docutils literal notranslate"><span class="pre">bike</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-pyfl.client">pyfl.client module</a><ul>
@@ -131,7 +135,7 @@
 <dd class="field-even"><p>The stats for that year.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
@@ -139,23 +143,81 @@
 </dd></dl>
 
 </section>
-<section id="module-pyfl.airquality">
-<span id="pyfl-airquality-module"></span><h2>pyfl.airquality module<a class="headerlink" href="#module-pyfl.airquality" title="Permalink to this heading"></a></h2>
+<section id="module-pyfl.air">
+<span id="pyfl-air-module"></span><h2>pyfl.air module<a class="headerlink" href="#module-pyfl.air" title="Permalink to this heading"></a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="pyfl.airquality.AirQuality">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AirQuality</span></span><a class="headerlink" href="#pyfl.airquality.AirQuality" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pyfl.air.AirQuality">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AirQuality</span></span><a class="headerlink" href="#pyfl.air.AirQuality" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>AirQuality class</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pyfl.airquality.AirQuality.get_air_quality">
-<span class="sig-name descname"><span class="pre">get_air_quality</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.airquality.AirQuality.get_air_quality" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pyfl.air.AirQuality.get_air_quality">
+<span class="sig-name descname"><span class="pre">get_air_quality</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.air.AirQuality.get_air_quality" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the current air quality in london</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The air quality in london.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyfl.bikePoint">
+<span id="pyfl-bikepoint-module"></span><h2>pyfl.bikePoint module<a class="headerlink" href="#module-pyfl.bikePoint" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyfl.bikePoint.bike">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bike</span></span><a class="headerlink" href="#pyfl.bikePoint.bike" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>bike class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.bikePoint.bike.get_all_bike_points">
+<span class="sig-name descname"><span class="pre">get_all_bike_points</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.bikePoint.bike.get_all_bike_points" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all the bike points</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>all the bike points in london.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.bikePoint.bike.get_bike_point">
+<span class="sig-name descname"><span class="pre">get_bike_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.bikePoint.bike.get_bike_point" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a specfic bike point</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>int</em>) – id of the bike point to get.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the bike point.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.bikePoint.bike.get_bike_point_by_name">
+<span class="sig-name descname"><span class="pre">get_bike_point_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.bikePoint.bike.get_bike_point_by_name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a specfic bike point</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – name of the bike point to get.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the bike point.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
@@ -255,7 +317,7 @@
 <dd class="field-even"><p>The line status.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>

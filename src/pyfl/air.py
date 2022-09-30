@@ -13,7 +13,7 @@ class AirQuality():
         Returns the current air quality in london
 
         :return: The air quality in london.
-        :rtype: str
+        :rtype: dict
         """
         endpoint = f"/AirQuality"
         return Helper.make_raw_api_call(endpoint)
