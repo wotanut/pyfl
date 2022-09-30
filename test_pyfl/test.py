@@ -45,7 +45,7 @@ def test_tube():
 	response = TFL.bike.get_all_bike_points()
 	assert isinstance(response,dict)
 
-	response = TFL.bike.get_bike_point(1122)
+	response = TFL.bike.get_bike_point("BikePoints_85")
 	assert isinstance(response,dict)
 
 	response = TFL.bike.get_bike_point_by_name("Baker Street")

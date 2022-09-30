@@ -18,7 +18,7 @@ class bike():
         endpoint = f"/BikePoint/"
         return Helper.parse(Helper.make_raw_api_call(endpoint))
 
-    def get_bike_point(self, id:int):
+    def get_bike_point(self, id:str):
         """
         Returns a specfic bike point
             
@@ -28,7 +28,7 @@ class bike():
         :rtype: dict
         """
         endpoint = f"/BikePoint/{id}"
-        return Helper.parse(Helper.make_raw_api_call(endpoint))
+        return Helper.make_raw_api_call(endpoint)
 
     def get_bike_point_by_name(self, name:str):
         """
