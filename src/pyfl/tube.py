@@ -15,7 +15,7 @@ class LU():
         :param kind: Status of the line to get.
         :type kind: str
         :return: The line status.
-        :rtype: str
+        :rtype: dict
         """
         endpoint = f"/line/{line}/status"
         return Helper.parse(Helper.make_raw_api_call(endpoint))

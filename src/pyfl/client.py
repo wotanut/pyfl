@@ -6,8 +6,8 @@ from .errors import *
 from .helper import Helper
 from .tube import LU
 from .accident import Accident
-from .airquality import AirQuality
-
+from .airQuality import AirQuality
+from .bikePoint import bike
 class client():
     def __init__(self, api_key):
         """
@@ -24,3 +24,4 @@ class client():
         self.helper = Helper()
         self.accident = Accident()
         self.AirQuality = AirQuality()
+        self.bike = bike()

@@ -15,7 +15,7 @@ class Accident():
         :param kind: Year for the stats to get.
         :type kind: str
         :return: The stats for that year.
-        :rtype: str
+        :rtype: dict
         """
-        endpoint = f"//AccidentStats/{year}"
+        endpoint = f"/AccidentStats/{year}"
         return Helper.parse(Helper.make_raw_api_call(endpoint))

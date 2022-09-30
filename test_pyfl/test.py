@@ -39,3 +39,14 @@ def test_tube():
 
 	response = TFL.AirQuality.get_air_quality()
 	assert isinstance(response,dict)
+
+	# tests bikePoint.py
+
+	response = TFL.bike.get_all_bike_points()
+	assert isinstance(response,dict)
+
+	response = TFL.bike.get_bike_point(1122)
+	assert isinstance(response,dict)
+
+	response = TFL.bike.get_bike_point_by_name("Baker Street")
+	assert isinstance(response,dict)
