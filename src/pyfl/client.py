@@ -6,7 +6,7 @@ from .errors import *
 from .helper import Helper
 from .tube import LU
 from .accident import Accident
-from .airQuality import AirQuality
+from .air import AirQuality
 from .bikePoint import bike
 class client():
     def __init__(self, api_key):
