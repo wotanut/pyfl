@@ -84,6 +84,14 @@ pyfl.occupancy module
    :undoc-members:
    :show-inheritance:
 
+pyfl.place module
+-----------------
+
+.. automodule:: pyfl.place
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 pyfl.tube module
 ----------------
 

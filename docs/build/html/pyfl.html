@@ -88,6 +88,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#pyfl.occupancy.Occupancy"><code class="docutils literal notranslate"><span class="pre">Occupancy</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pyfl.place">pyfl.place module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyfl.place.Place"><code class="docutils literal notranslate"><span class="pre">Place</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#module-pyfl.tube">pyfl.tube module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#pyfl.tube.LU"><code class="docutils literal notranslate"><span class="pre">LU</span></code></a></li>
 </ul>
@@ -487,10 +491,189 @@ Perform a journey between two points, note: there are many more parameters that 
 <dd><p>Returns the current occupancy of a bike point</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>id</strong> (<em>list</em>) – The id of the bike point, defualts to all</p>
+<dd class="field-odd"><p><strong>id</strong> (<em>list</em>) – The id of the bike point</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The occupancy of the bike point.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyfl.place">
+<span id="pyfl-place-module"></span><h2>pyfl.place module<a class="headerlink" href="#module-pyfl.place" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyfl.place.Place">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Place</span></span><a class="headerlink" href="#pyfl.place.Place" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_place_catagories">
+<span class="sig-name descname"><span class="pre">get_place_catagories</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_place_catagories" title="Permalink to this definition"></a></dt>
+<dd><p>Get all the place catagories</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The place catagories</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_place_types">
+<span class="sig-name descname"><span class="pre">get_place_types</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_place_types" title="Permalink to this definition"></a></dt>
+<dd><p>Get all the place types</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The place types</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_street">
+<span class="sig-name descname"><span class="pre">get_street</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">postcode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_street" title="Permalink to this definition"></a></dt>
+<dd><p>Get the street for a given postcode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>postcode</strong> (<em>str</em>) – The postcode to get the street for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The street</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_places_by_type">
+<span class="sig-name descname"><span class="pre">get_places_by_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activeOnly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_places_by_type" title="Permalink to this definition"></a></dt>
+<dd><p>Get all the places of a given type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<em>list</em>) – The type of place to get</p></li>
+<li><p><strong>activeOnly</strong> – Only return active places, defaults to False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The places</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_places_by_id">
+<span class="sig-name descname"><span class="pre">get_places_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_places_by_id" title="Permalink to this definition"></a></dt>
+<dd><p>Get a place by it’s id</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – The id of the place</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The place</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_places_by_location">
+<span class="sig-name descname"><span class="pre">get_places_by_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">long</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catagories</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">includeChildren</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activeOnly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_places_by_location" title="Permalink to this definition"></a></dt>
+<dd><p>Get all the places of a given type within a given radius of a given location</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>radius</strong> (<em>int</em>) – The radius to search in</p></li>
+<li><p><strong>lat</strong> (<em>float</em>) – The latitude of the location</p></li>
+<li><p><strong>long</strong> (<em>float</em>) – The longitude of the location</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – The type of place to get (optional)</p></li>
+<li><p><strong>catagories</strong> (<em>list</em>) – The catagories of place to get (optional)</p></li>
+<li><p><strong>includeChildren</strong> (<em>bool</em>) – Include child places, defaults to False</p></li>
+<li><p><strong>activeOnly</strong> (<em>bool</em>) – Only return active places, defaults to False</p></li>
+<li><p><strong>max</strong> (<em>int</em>) – The maximum number of places to return, defaults to 20</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The places</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_place_by_type_and_location">
+<span class="sig-name descname"><span class="pre">get_place_by_type_and_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">long</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_place_by_type_and_location" title="Permalink to this definition"></a></dt>
+<dd><p>Get all the places of a given type within a given radius of a given location</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<em>list</em>) – The type of place to get</p></li>
+<li><p><strong>lat</strong> (<em>float</em>) – The latitude of the location</p></li>
+<li><p><strong>long</strong> (<em>float</em>) – The longitude of the location</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The places</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_place_by_type">
+<span class="sig-name descname"><span class="pre">get_place_by_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_place_by_type" title="Permalink to this definition"></a></dt>
+<dd><p>Get a place by it’s name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the place</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The place</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_place_overlay">
+<span class="sig-name descname"><span class="pre">get_place_overlay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">long</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_place_overlay" title="Permalink to this definition"></a></dt>
+<dd><p>Get the overlay for a given place</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> (<em>int</em>) – The zoom level</p></li>
+<li><p><strong>type</strong> (<em>list</em>) – The type of place to get</p></li>
+<li><p><strong>width</strong> (<em>int</em>) – The width of the overlay</p></li>
+<li><p><strong>height</strong> (<em>int</em>) – The height of the overlay</p></li>
+<li><p><strong>lat</strong> (<em>int</em>) – The latitude of the location</p></li>
+<li><p><strong>long</strong> (<em>int</em>) – The longitude of the location</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The overlay</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>dict</p>
