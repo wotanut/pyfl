@@ -12,6 +12,7 @@ from .cabWise import cab
 from .journeys import journeys
 from .mode import Mode
 from .occupancy import Occupancy
+from .place import Place
 
 class client():
     def __init__(self, api_key):
@@ -34,3 +35,4 @@ class client():
         self.journey = journeys()
         self.mode = Mode()
         self.occupancy = Occupancy()
+        self.place = Place()

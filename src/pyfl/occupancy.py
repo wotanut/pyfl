@@ -43,7 +43,7 @@ class Occupancy():
         """
         Returns the current occupancy of a bike point
 
-        :param id: The id of the bike point, defualts to all
+        :param id: The id of the bike point
         :type id: list
         :return: The occupancy of the bike point.
         :rtype: dict
