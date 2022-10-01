@@ -16,7 +16,7 @@ class Mode():
         :rtype: dict
         """
         endpoint = f"/Mode/ActiveServiceTypes"
-        return Helper.make_raw_api_call(endpoint)
+        return Helper.parse(Helper.make_raw_api_call(endpoint))
 
     def get_arrival_predictions(self, mode:str, count=-1):
         """
@@ -30,4 +30,4 @@ class Mode():
         :rtype: dict
         """
         endpoint = f"/Mode/{mode}/Arrivals"
-        return Helper.make_raw_api_call(endpoint)
+        return Helper.parse(Helper.make_raw_api_call(endpoint))

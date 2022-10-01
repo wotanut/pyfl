@@ -17,7 +17,7 @@ class journeys():
         :rtype: dict
         """
         endpoint = f"/Journey/Meta/Modes"
-        return Helper.make_raw_api_call(endpoint)
+        return Helper.parse(Helper.make_raw_api_call(endpoint))
 
     def perform_journey(self, fromcoord:str, tocoord:str):
         """"

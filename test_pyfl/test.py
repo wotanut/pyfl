@@ -5,6 +5,7 @@ def test_tube():
 	"""Tests an API call to get a tube lines status"""
 	
 	token = os.getenv("TFL_API_TOKEN")
+	token = ""
 
 	# tests getting the API key
 
