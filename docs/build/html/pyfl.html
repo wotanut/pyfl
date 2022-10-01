@@ -84,6 +84,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#pyfl.mode.Mode"><code class="docutils literal notranslate"><span class="pre">Mode</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pyfl.occupancy">pyfl.occupancy module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyfl.occupancy.Occupancy"><code class="docutils literal notranslate"><span class="pre">Occupancy</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#module-pyfl.tube">pyfl.tube module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#pyfl.tube.LU"><code class="docutils literal notranslate"><span class="pre">LU</span></code></a></li>
 </ul>
@@ -426,6 +430,67 @@ Perform a journey between two points, note: there are many more parameters that 
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The arrival predictions.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyfl.occupancy">
+<span id="pyfl-occupancy-module"></span><h2>pyfl.occupancy module<a class="headerlink" href="#module-pyfl.occupancy" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyfl.occupancy.Occupancy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Occupancy</span></span><a class="headerlink" href="#pyfl.occupancy.Occupancy" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Occupancy class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.occupancy.Occupancy.get_car_park_occupancy">
+<span class="sig-name descname"><span class="pre">get_car_park_occupancy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.occupancy.Occupancy.get_car_park_occupancy" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the current occupancy of a car park</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>string</em>) – The id of the car park, defualts to all</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The occupancy of the car park.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.occupancy.Occupancy.get_charge_point_occupancy">
+<span class="sig-name descname"><span class="pre">get_charge_point_occupancy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.occupancy.Occupancy.get_charge_point_occupancy" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the current occupancy of a charge point</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>array</em>) – The id of the charge point, defualts to all</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The occupancy of the charge point.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.occupancy.Occupancy.get_bike_point_occupancy">
+<span class="sig-name descname"><span class="pre">get_bike_point_occupancy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.occupancy.Occupancy.get_bike_point_occupancy" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the current occupancy of a bike point</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>list</em>) – The id of the bike point, defualts to all</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The occupancy of the bike point.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>dict</p>

@@ -76,6 +76,14 @@ pyfl.mode module
    :undoc-members:
    :show-inheritance:
 
+pyfl.occupancy module
+---------------------
+
+.. automodule:: pyfl.occupancy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 pyfl.tube module
 ----------------
 
