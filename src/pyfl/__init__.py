@@ -9,3 +9,5 @@ from .bikePoint import *
 from .cabWise import *
 from .journeys import *
 from .mode import *
+from .occupancy import *
+from .place import *

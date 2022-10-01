@@ -72,3 +72,14 @@ def test_tube():
 
 	response = TFL.mode.get_arrival_predictions("tube")
 	assert isinstance(response,dict)
+
+	# tests occupancy.py
+
+	response = TFL.occupancy.get_bike_point_occupancy(["BikePoints_85"])
+	assert isinstance(response,dict)
+
+	response = TFL.occupancy.get_car_park_occupancy()
+	assert isinstance(response,dict)
+
+	response = TFL.occupancy.get_charge_point_occupancy()
+	assert isinstance(response,dict)
