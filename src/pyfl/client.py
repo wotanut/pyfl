@@ -13,6 +13,7 @@ from .journeys import journeys
 from .mode import Mode
 from .occupancy import Occupancy
 from .place import Place
+from .search import Search
 
 class client():
     def __init__(self, api_key):
@@ -36,3 +37,4 @@ class client():
         self.mode = Mode()
         self.occupancy = Occupancy()
         self.place = Place()
+        self.search = Search()

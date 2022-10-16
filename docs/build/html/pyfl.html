@@ -88,6 +88,14 @@
 <li class="toctree-l4"><a class="reference internal" href="#pyfl.occupancy.Occupancy"><code class="docutils literal notranslate"><span class="pre">Occupancy</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pyfl.place">pyfl.place module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyfl.place.Place"><code class="docutils literal notranslate"><span class="pre">Place</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pyfl.search">pyfl.search module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyfl.search.Search"><code class="docutils literal notranslate"><span class="pre">Search</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#module-pyfl.tube">pyfl.tube module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#pyfl.tube.LU"><code class="docutils literal notranslate"><span class="pre">LU</span></code></a></li>
 </ul>
@@ -336,16 +344,105 @@
 <span class="sig-name descname"><span class="pre">victoria</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'victoria'</span></em><a class="headerlink" href="#pyfl.helper.Helper.victoria" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyfl.helper.Helper.circle">
+<span class="sig-name descname"><span class="pre">circle</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'circle'</span></em><a class="headerlink" href="#pyfl.helper.Helper.circle" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyfl.helper.Helper.district">
+<span class="sig-name descname"><span class="pre">district</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'district'</span></em><a class="headerlink" href="#pyfl.helper.Helper.district" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyfl.helper.Helper.HammersmithCity">
+<span class="sig-name descname"><span class="pre">HammersmithCity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'hammersmith-city'</span></em><a class="headerlink" href="#pyfl.helper.Helper.HammersmithCity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyfl.helper.Helper.Piccadilly">
+<span class="sig-name descname"><span class="pre">Piccadilly</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'piccadilly'</span></em><a class="headerlink" href="#pyfl.helper.Helper.Piccadilly" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyfl.helper.Helper.Metropolitan">
+<span class="sig-name descname"><span class="pre">Metropolitan</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'metropolitan'</span></em><a class="headerlink" href="#pyfl.helper.Helper.Metropolitan" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyfl.helper.Helper.Northern">
+<span class="sig-name descname"><span class="pre">Northern</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'northern'</span></em><a class="headerlink" href="#pyfl.helper.Helper.Northern" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyfl.helper.Helper.Jubilee">
+<span class="sig-name descname"><span class="pre">Jubilee</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'jubilee'</span></em><a class="headerlink" href="#pyfl.helper.Helper.Jubilee" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyfl.helper.Helper.Central">
+<span class="sig-name descname"><span class="pre">Central</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'central'</span></em><a class="headerlink" href="#pyfl.helper.Helper.Central" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyfl.helper.Helper.Bakerloo">
+<span class="sig-name descname"><span class="pre">Bakerloo</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'bakerloo'</span></em><a class="headerlink" href="#pyfl.helper.Helper.Bakerloo" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyfl.helper.Helper.WaterlooCity">
+<span class="sig-name descname"><span class="pre">WaterlooCity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'waterloo-city'</span></em><a class="headerlink" href="#pyfl.helper.Helper.WaterlooCity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyfl.helper.Helper.DLR">
+<span class="sig-name descname"><span class="pre">DLR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'dlr'</span></em><a class="headerlink" href="#pyfl.helper.Helper.DLR" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyfl.helper.Helper.Overground">
+<span class="sig-name descname"><span class="pre">Overground</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'overground'</span></em><a class="headerlink" href="#pyfl.helper.Helper.Overground" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyfl.helper.Helper.TfL_Rail">
+<span class="sig-name descname"><span class="pre">TfL_Rail</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'tfl-rail'</span></em><a class="headerlink" href="#pyfl.helper.Helper.TfL_Rail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyfl.helper.Helper.LondonOverground">
+<span class="sig-name descname"><span class="pre">LondonOverground</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'london-overground'</span></em><a class="headerlink" href="#pyfl.helper.Helper.LondonOverground" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="pyfl.helper.Helper.make_raw_api_call">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">make_raw_api_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endpoint</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.helper.Helper.make_raw_api_call" title="Permalink to this definition"></a></dt>
 <dd><p>Make a raw API call to the TFL API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>endpoint</strong> (<em>str</em>) – The endpoint to call</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The json response from the API</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyfl.helper.Helper.parse">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.helper.Helper.parse" title="Permalink to this definition"></a></dt>
-<dd><p>A lot of the TFL API returns a lot of crap, this function removes it…</p>
+<dd><p>removes the data from the response</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>json_data</strong> (<em>dict</em>) – The json data to parse</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The parsed data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -487,13 +584,274 @@ Perform a journey between two points, note: there are many more parameters that 
 <dd><p>Returns the current occupancy of a bike point</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>id</strong> (<em>list</em>) – The id of the bike point, defualts to all</p>
+<dd class="field-odd"><p><strong>id</strong> (<em>list</em>) – The id of the bike point</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The occupancy of the bike point.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyfl.place">
+<span id="pyfl-place-module"></span><h2>pyfl.place module<a class="headerlink" href="#module-pyfl.place" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyfl.place.Place">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Place</span></span><a class="headerlink" href="#pyfl.place.Place" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_place_catagories">
+<span class="sig-name descname"><span class="pre">get_place_catagories</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_place_catagories" title="Permalink to this definition"></a></dt>
+<dd><p>Get all the place catagories</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The place catagories</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_place_types">
+<span class="sig-name descname"><span class="pre">get_place_types</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_place_types" title="Permalink to this definition"></a></dt>
+<dd><p>Get all the place types</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The place types</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_street">
+<span class="sig-name descname"><span class="pre">get_street</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">postcode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_street" title="Permalink to this definition"></a></dt>
+<dd><p>Get the street for a given postcode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>postcode</strong> (<em>str</em>) – The postcode to get the street for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The street</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_places_by_type">
+<span class="sig-name descname"><span class="pre">get_places_by_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activeOnly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_places_by_type" title="Permalink to this definition"></a></dt>
+<dd><p>Get all the places of a given type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<em>list</em>) – The type of place to get</p></li>
+<li><p><strong>activeOnly</strong> – Only return active places, defaults to False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The places</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_places_by_id">
+<span class="sig-name descname"><span class="pre">get_places_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_places_by_id" title="Permalink to this definition"></a></dt>
+<dd><p>Get a place by it’s id</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – The id of the place</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The place</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_places_by_location">
+<span class="sig-name descname"><span class="pre">get_places_by_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">long</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catagories</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">includeChildren</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activeOnly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_places_by_location" title="Permalink to this definition"></a></dt>
+<dd><p>Get all the places of a given type within a given radius of a given location</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>radius</strong> (<em>int</em>) – The radius to search in</p></li>
+<li><p><strong>lat</strong> (<em>float</em>) – The latitude of the location</p></li>
+<li><p><strong>long</strong> (<em>float</em>) – The longitude of the location</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – The type of place to get (optional)</p></li>
+<li><p><strong>catagories</strong> (<em>list</em>) – The catagories of place to get (optional)</p></li>
+<li><p><strong>includeChildren</strong> (<em>bool</em>) – Include child places, defaults to False</p></li>
+<li><p><strong>activeOnly</strong> (<em>bool</em>) – Only return active places, defaults to False</p></li>
+<li><p><strong>max</strong> (<em>int</em>) – The maximum number of places to return, defaults to 20</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The places</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_place_by_type_and_location">
+<span class="sig-name descname"><span class="pre">get_place_by_type_and_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">long</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_place_by_type_and_location" title="Permalink to this definition"></a></dt>
+<dd><p>Get all the places of a given type within a given radius of a given location</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<em>list</em>) – The type of place to get</p></li>
+<li><p><strong>lat</strong> (<em>float</em>) – The latitude of the location</p></li>
+<li><p><strong>long</strong> (<em>float</em>) – The longitude of the location</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The places</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_place_by_type">
+<span class="sig-name descname"><span class="pre">get_place_by_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_place_by_type" title="Permalink to this definition"></a></dt>
+<dd><p>Get a place by it’s name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the place</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The place</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.place.Place.get_place_overlay">
+<span class="sig-name descname"><span class="pre">get_place_overlay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">long</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_place_overlay" title="Permalink to this definition"></a></dt>
+<dd><p>Get the overlay for a given place</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> (<em>int</em>) – The zoom level</p></li>
+<li><p><strong>type</strong> (<em>list</em>) – The type of place to get</p></li>
+<li><p><strong>width</strong> (<em>int</em>) – The width of the overlay</p></li>
+<li><p><strong>height</strong> (<em>int</em>) – The height of the overlay</p></li>
+<li><p><strong>lat</strong> (<em>int</em>) – The latitude of the location</p></li>
+<li><p><strong>long</strong> (<em>int</em>) – The longitude of the location</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The overlay</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyfl.search">
+<span id="pyfl-search-module"></span><h2>pyfl.search module<a class="headerlink" href="#module-pyfl.search" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyfl.search.Search">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Search</span></span><a class="headerlink" href="#pyfl.search.Search" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.search.Search.search">
+<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.search.Search.search" title="Permalink to this definition"></a></dt>
+<dd><p>Searches the TFL website for any references of the query, returns 100 results</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>query</strong> – The query which to search</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Any references of the query</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.search.Search.search_bus_schedule">
+<span class="sig-name descname"><span class="pre">search_bus_schedule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.search.Search.search_bus_schedule" title="Permalink to this definition"></a></dt>
+<dd><p>Searches the TFL website for a bus number</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>query</strong> – The query which to search</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The schedule of the busses</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.search.Search.search_provider_names">
+<span class="sig-name descname"><span class="pre">search_provider_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.search.Search.search_provider_names" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.search.Search.get_available_search_catagories">
+<span class="sig-name descname"><span class="pre">get_available_search_catagories</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.search.Search.get_available_search_catagories" title="Permalink to this definition"></a></dt>
+<dd><p>Get’s all the available search cataogries</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>All of the available search catagries</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.search.Search.get_all_avaiable_sort_options">
+<span class="sig-name descname"><span class="pre">get_all_avaiable_sort_options</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.search.Search.get_all_avaiable_sort_options" title="Permalink to this definition"></a></dt>
+<dd><p>Get’s all the avaiable sorting options</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list of all the avaialble sorting options</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>

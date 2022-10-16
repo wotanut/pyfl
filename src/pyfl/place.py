@@ -1,4 +1,3 @@
-from array import array
 from .errors import *
 from .helper import Helper
 

@@ -31,7 +31,7 @@ Running Tests Locally
     pip3 install sphinx_rtd_theme
 
 2. Run ``pytest test_pyfl/test.py`` in the root directory.
-3. Run ``sphinx-apidoc -o docs/source/ src/pyfl/`` in the route directory.
+3. Run ``sphinx-apidoc -f -o docs/source/ src/pyfl/`` in the route directory.
 4. Run make html in the docs folder.
 
 .. warning:: 

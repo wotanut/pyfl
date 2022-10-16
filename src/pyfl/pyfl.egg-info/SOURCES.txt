@@ -1,8 +1,0 @@
-LICENSE
-README.md
-pyproject.toml
-setup.cfg
-pyfl/pyfl.egg-info/PKG-INFO
-pyfl/pyfl.egg-info/SOURCES.txt
-pyfl/pyfl.egg-info/dependency_links.txt
-pyfl/pyfl.egg-info/top_level.txt

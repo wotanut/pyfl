@@ -83,3 +83,17 @@ def test_tube():
 
 	response = TFL.occupancy.get_charge_point_occupancy()
 	assert isinstance(response,dict)
+
+	# tests search.py
+
+	response = TFL.search.search("test")
+	assert isinstance(response,dict)
+
+	response = TFL.search.search_bus_schedule("test")
+	assert isinstance(response,dict)
+
+	response = TFL.search.get_all_avaiable_sort_options()
+	assert isinstance(response,dict)
+
+	response = TFL.search.get_available_search_catagories()
+	assert isinstance(response,dict)
