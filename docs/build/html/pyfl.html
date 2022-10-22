@@ -92,12 +92,28 @@
 <li class="toctree-l4"><a class="reference internal" href="#pyfl.place.Place"><code class="docutils literal notranslate"><span class="pre">Place</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pyfl.road">pyfl.road module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyfl.road.Road"><code class="docutils literal notranslate"><span class="pre">Road</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#module-pyfl.search">pyfl.search module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#pyfl.search.Search"><code class="docutils literal notranslate"><span class="pre">Search</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pyfl.stop">pyfl.stop module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyfl.stop.Stop"><code class="docutils literal notranslate"><span class="pre">Stop</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pyfl.travel">pyfl.travel module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyfl.travel.Travel"><code class="docutils literal notranslate"><span class="pre">Travel</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#module-pyfl.tube">pyfl.tube module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#pyfl.tube.LU"><code class="docutils literal notranslate"><span class="pre">LU</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pyfl.vehicle">pyfl.vehicle module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyfl.vehicle.Vehicle"><code class="docutils literal notranslate"><span class="pre">Vehicle</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-pyfl">Module contents</a></li>
@@ -292,6 +308,7 @@
 <dt class="sig sig-object py" id="pyfl.client.client">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">client</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.client.client" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Synchronous client class</p>
 </dd></dl>
 
 </section>
@@ -339,6 +356,7 @@
 <dt class="sig sig-object py" id="pyfl.helper.Helper">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Helper</span></span><a class="headerlink" href="#pyfl.helper.Helper" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Utility class to help with developing the library.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyfl.helper.Helper.victoria">
 <span class="sig-name descname"><span class="pre">victoria</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'victoria'</span></em><a class="headerlink" href="#pyfl.helper.Helper.victoria" title="Permalink to this definition"></a></dt>
@@ -604,6 +622,7 @@ Perform a journey between two points, note: there are many more parameters that 
 <dt class="sig sig-object py" id="pyfl.place.Place">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Place</span></span><a class="headerlink" href="#pyfl.place.Place" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Place class</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyfl.place.Place.get_place_catagories">
 <span class="sig-name descname"><span class="pre">get_place_catagories</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.place.Place.get_place_catagories" title="Permalink to this definition"></a></dt>
@@ -777,12 +796,23 @@ Perform a journey between two points, note: there are many more parameters that 
 </dd></dl>
 
 </section>
+<section id="module-pyfl.road">
+<span id="pyfl-road-module"></span><h2>pyfl.road module<a class="headerlink" href="#module-pyfl.road" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyfl.road.Road">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Road</span></span><a class="headerlink" href="#pyfl.road.Road" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Road Class</p>
+</dd></dl>
+
+</section>
 <section id="module-pyfl.search">
 <span id="pyfl-search-module"></span><h2>pyfl.search module<a class="headerlink" href="#module-pyfl.search" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyfl.search.Search">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Search</span></span><a class="headerlink" href="#pyfl.search.Search" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Search class</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyfl.search.Search.search">
 <span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.search.Search.search" title="Permalink to this definition"></a></dt>
@@ -859,6 +889,26 @@ Perform a journey between two points, note: there are many more parameters that 
 </dd></dl>
 
 </section>
+<section id="module-pyfl.stop">
+<span id="pyfl-stop-module"></span><h2>pyfl.stop module<a class="headerlink" href="#module-pyfl.stop" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyfl.stop.Stop">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Stop</span></span><a class="headerlink" href="#pyfl.stop.Stop" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Stop class</p>
+</dd></dl>
+
+</section>
+<section id="module-pyfl.travel">
+<span id="pyfl-travel-module"></span><h2>pyfl.travel module<a class="headerlink" href="#module-pyfl.travel" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyfl.travel.Travel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Travel</span></span><a class="headerlink" href="#pyfl.travel.Travel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Travel class</p>
+</dd></dl>
+
+</section>
 <section id="module-pyfl.tube">
 <span id="pyfl-tube-module"></span><h2>pyfl.tube module<a class="headerlink" href="#module-pyfl.tube" title="Permalink to this heading"></a></h2>
 <dl class="py class">
@@ -876,6 +926,33 @@ Perform a journey between two points, note: there are many more parameters that 
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The line status.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyfl.vehicle">
+<span id="pyfl-vehicle-module"></span><h2>pyfl.vehicle module<a class="headerlink" href="#module-pyfl.vehicle" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyfl.vehicle.Vehicle">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Vehicle</span></span><a class="headerlink" href="#pyfl.vehicle.Vehicle" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Vehicle class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.vehicle.Vehicle.get_vehicle_arrival">
+<span class="sig-name descname"><span class="pre">get_vehicle_arrival</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">registration</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfl.vehicle.Vehicle.get_vehicle_arrival" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the predicted arrival of a vehicle with the given registration</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kind</strong> (<em>list</em><em> of </em><em>strings</em>) – The registration of the vehicle to gt</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The predicted arrival time of the vehicle with that registration</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>dict</p>
