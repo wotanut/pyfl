@@ -14,7 +14,7 @@ Features
 ^^^^^^^^
 
 - Active python library developed specifically for the TFL API
-- Object orientated code for eas of use
+- Object orientated code for ease of use
 - Test driven development
 
 
