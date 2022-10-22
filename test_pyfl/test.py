@@ -21,11 +21,6 @@ def test_tube():
 	assert isinstance(Victoria, str)
 	assert Victoria == "victoria", "This should be an attribute for the underground"
 
-	# tests tube.py
-
-	response = TFL.tube.get_line_status("victoria")
-	assert isinstance(response, dict)
-
 	# tests accident.py
 
 	response = TFL.accident.get_accident_stats(2019)
@@ -84,6 +79,8 @@ def test_tube():
 	response = TFL.occupancy.get_charge_point_occupancy()
 	assert isinstance(response,dict)
 
+	# tests place.py
+
 	# tests search.py
 
 	response = TFL.search.search("test")
@@ -97,3 +94,14 @@ def test_tube():
 
 	response = TFL.search.get_available_search_catagories()
 	assert isinstance(response,dict)
+
+	# tests stop.py
+
+	# tests travel.py
+
+	# tests tube.py
+
+	response = TFL.tube.get_line_status("victoria")
+	assert isinstance(response, dict)
+
+	# test vehicle.py
