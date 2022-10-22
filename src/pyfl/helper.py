@@ -2,6 +2,7 @@ import requests
 from .errors import *
 
 class Helper():
+    """ Utility class to help with developing the library."""
     victoria = "victoria"
     circle = "circle"
     district = "district"
@@ -20,6 +21,7 @@ class Helper():
 
 
     def __init__(self):
+        """Initialises the helper class. .. warning:: Given that this class is mostly staticmethod's, this function is essentially useless and is merely for internal use"""
         pass
 
     @staticmethod

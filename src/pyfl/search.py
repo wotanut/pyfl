@@ -2,7 +2,9 @@ from .errors import *
 from .helper import Helper
 
 class Search():
+    """ Search class"""
     def __init__(self):
+        """ Initilaises the search class"""
         pass
 
     def search(self,query:str):

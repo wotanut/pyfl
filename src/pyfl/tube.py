@@ -2,7 +2,8 @@
 from .errors import *
 from .helper import Helper
 
-# PLEASE NOTE: THIS FILE NEEDS A LOT OF WORK, IT IS NOT COMPLETE
+#NOTE: THIS FILE IS NOT COMPLETE
+# PLEASE NOTE: THIS FILE MAPS TO THE LINE ENDPOINT
 
 class LU():
     """ Line class"""

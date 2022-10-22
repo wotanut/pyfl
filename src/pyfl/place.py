@@ -2,7 +2,9 @@ from .errors import *
 from .helper import Helper
 
 class Place():
+    """ Place class """
     def __init__(self):
+        """ Initialises the place class"""
         pass
 
     def get_place_catagories(self):
