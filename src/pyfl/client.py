@@ -48,4 +48,4 @@ class client():
         self.vehicle = Vehicle()
         self.stop = Stop()
         self.travel = Travel()
-        self.vehicle = Vehicle
+        self.vehicle = Vehicle()

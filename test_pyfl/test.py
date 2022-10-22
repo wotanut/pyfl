@@ -89,11 +89,11 @@ def test_tube():
 	response = TFL.search.search_bus_schedule("test")
 	assert isinstance(response,dict)
 
-	response = TFL.search.get_all_avaiable_sort_options()
-	assert isinstance(response,dict)
+	# response = TFL.search.get_all_avaiable_sort_options()
+	# assert isinstance(response,dict)
 
-	response = TFL.search.get_available_search_catagories()
-	assert isinstance(response,dict)
+	# response = TFL.search.get_available_search_catagories()
+	# assert isinstance(response,dict)
 
 	# tests stop.py
 
@@ -105,3 +105,6 @@ def test_tube():
 	assert isinstance(response, dict)
 
 	# test vehicle.py
+
+	# response = TFL.vehicle.get_vehicle_arrival(["LX58CFV"])
+	# assert isinstance(response,dict)
