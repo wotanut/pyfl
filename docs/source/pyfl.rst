@@ -92,6 +92,14 @@ pyfl.place module
    :undoc-members:
    :show-inheritance:
 
+pyfl.road module
+----------------
+
+.. automodule:: pyfl.road
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 pyfl.search module
 ------------------
 
@@ -100,10 +108,34 @@ pyfl.search module
    :undoc-members:
    :show-inheritance:
 
+pyfl.stop module
+----------------
+
+.. automodule:: pyfl.stop
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyfl.travel module
+------------------
+
+.. automodule:: pyfl.travel
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 pyfl.tube module
 ----------------
 
 .. automodule:: pyfl.tube
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyfl.vehicle module
+-------------------
+
+.. automodule:: pyfl.vehicle
    :members:
    :undoc-members:
    :show-inheritance:
