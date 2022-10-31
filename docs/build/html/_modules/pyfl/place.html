@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyfl.place &mdash; pyfl 0.0.9 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> pyfl
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">pyfl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyfl</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      <li>pyfl.place</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for pyfl.place</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">.errors</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.helper</span> <span class="kn">import</span> <span class="n">Helper</span>
+
+<div class="viewcode-block" id="Place"><a class="viewcode-back" href="../../pyfl.html#pyfl.place.Place">[docs]</a><span class="k">class</span> <span class="nc">Place</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot; Place class &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Initialises the place class&quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+<div class="viewcode-block" id="Place.get_place_catagories"><a class="viewcode-back" href="../../pyfl.html#pyfl.place.Place.get_place_catagories">[docs]</a>    <span class="k">def</span> <span class="nf">get_place_catagories</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get all the place catagories</span>
+
+<span class="sd">        :return: The place catagories</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/Place/Meta/Categories&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Place.get_place_types"><a class="viewcode-back" href="../../pyfl.html#pyfl.place.Place.get_place_types">[docs]</a>    <span class="k">def</span> <span class="nf">get_place_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get all the place types</span>
+
+<span class="sd">        :return: The place types</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/Place/Meta/PlaceTypes&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Place.get_street"><a class="viewcode-back" href="../../pyfl.html#pyfl.place.Place.get_street">[docs]</a>    <span class="k">def</span> <span class="nf">get_street</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">postcode</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the street for a given postcode</span>
+
+<span class="sd">        :param postcode: The postcode to get the street for</span>
+<span class="sd">        :type postcode: str</span>
+<span class="sd">        :return: The street</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/Place/Address/Streets/</span><span class="si">{</span><span class="n">postcode</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">)</span></div>
+    
+<div class="viewcode-block" id="Place.get_places_by_type"><a class="viewcode-back" href="../../pyfl.html#pyfl.place.Place.get_places_by_type">[docs]</a>    <span class="k">def</span> <span class="nf">get_places_by_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="p">[],</span> <span class="n">activeOnly</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get all the places of a given type</span>
+
+<span class="sd">        :param type: The type of place to get</span>
+<span class="sd">        :type type: list</span>
+<span class="sd">        :param activeOnly: Only return active places, defaults to False</span>
+<span class="sd">        :return: The places</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/Place/</span><span class="si">{</span><span class="nb">type</span><span class="si">}</span><span class="s2">?activeOnly=</span><span class="si">{</span><span class="n">activeOnly</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="Place.get_places_by_id"><a class="viewcode-back" href="../../pyfl.html#pyfl.place.Place.get_places_by_id">[docs]</a>    <span class="k">def</span> <span class="nf">get_places_by_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">:</span><span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get a place by it&#39;s id</span>
+
+<span class="sd">        :param id: The id of the place</span>
+<span class="sd">        :type id: str</span>
+<span class="sd">        :return: The place</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/Place/</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="Place.get_places_by_location"><a class="viewcode-back" href="../../pyfl.html#pyfl.place.Place.get_places_by_location">[docs]</a>    <span class="k">def</span> <span class="nf">get_places_by_location</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">radius</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span><span class="n">lat</span><span class="p">:</span><span class="nb">float</span><span class="p">,</span> <span class="n">long</span><span class="p">:</span><span class="nb">float</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">catagories</span><span class="o">=</span><span class="p">[],</span> <span class="n">includeChildren</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">activeOnly</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="nb">max</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get all the places of a given type within a given radius of a given location</span>
+
+<span class="sd">        :param radius: The radius to search in</span>
+<span class="sd">        :type radius: int</span>
+<span class="sd">        :param lat: The latitude of the location</span>
+<span class="sd">        :type lat: float</span>
+<span class="sd">        :param long: The longitude of the location</span>
+<span class="sd">        :type long: float</span>
+<span class="sd">        :param type: The type of place to get (optional)</span>
+<span class="sd">        :type type: str</span>
+<span class="sd">        :param catagories: The catagories of place to get (optional)</span>
+<span class="sd">        :type catagories: list</span>
+<span class="sd">        :param includeChildren: Include child places, defaults to False</span>
+<span class="sd">        :type includeChildren: bool</span>
+<span class="sd">        :param activeOnly: Only return active places, defaults to False</span>
+<span class="sd">        :type activeOnly: bool</span>
+<span class="sd">        :param max: The maximum number of places to return, defaults to 20</span>
+<span class="sd">        :type max: int</span>
+<span class="sd">        :return: The places</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/Place?radius=</span><span class="si">{</span><span class="n">radius</span><span class="si">}</span><span class="s2">&amp;lat=</span><span class="si">{</span><span class="n">lat</span><span class="si">}</span><span class="s2">&amp;lon=</span><span class="si">{</span><span class="n">long</span><span class="si">}</span><span class="s2">&amp;type=</span><span class="si">{</span><span class="nb">type</span><span class="si">}</span><span class="s2">&amp;categories=</span><span class="si">{</span><span class="n">catagories</span><span class="si">}</span><span class="s2">&amp;includeChildren=</span><span class="si">{</span><span class="n">includeChildren</span><span class="si">}</span><span class="s2">&amp;activeOnly=</span><span class="si">{</span><span class="n">activeOnly</span><span class="si">}</span><span class="s2">&amp;max=</span><span class="si">{</span><span class="nb">max</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Place.get_place_by_type_and_location"><a class="viewcode-back" href="../../pyfl.html#pyfl.place.Place.get_place_by_type_and_location">[docs]</a>    <span class="k">def</span> <span class="nf">get_place_by_type_and_location</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="nb">type</span><span class="p">:</span><span class="nb">list</span><span class="p">,</span><span class="n">lat</span><span class="p">:</span><span class="nb">float</span><span class="p">,</span><span class="n">long</span><span class="p">:</span><span class="nb">float</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get all the places of a given type within a given radius of a given location</span>
+
+<span class="sd">        :param type: The type of place to get</span>
+<span class="sd">        :type type: list</span>
+<span class="sd">        :param lat: The latitude of the location</span>
+<span class="sd">        :type lat: float</span>
+<span class="sd">        :param long: The longitude of the location</span>
+<span class="sd">        :type long: float</span>
+<span class="sd">        :return: The places</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/Place/</span><span class="si">{</span><span class="nb">type</span><span class="si">}</span><span class="s2">/At/</span><span class="si">{</span><span class="n">lat</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">long</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Place.get_place_by_type"><a class="viewcode-back" href="../../pyfl.html#pyfl.place.Place.get_place_by_type">[docs]</a>    <span class="k">def</span> <span class="nf">get_place_by_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">name</span><span class="p">:</span><span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get a place by it&#39;s name</span>
+
+<span class="sd">        :param name: The name of the place</span>
+<span class="sd">        :type name: str</span>
+<span class="sd">        :return: The place</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/Place/Search?name=</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="Place.get_place_overlay"><a class="viewcode-back" href="../../pyfl.html#pyfl.place.Place.get_place_overlay">[docs]</a>    <span class="k">def</span> <span class="nf">get_place_overlay</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">z</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span><span class="nb">list</span><span class="p">,</span><span class="n">width</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span><span class="n">height</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span><span class="n">lat</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span><span class="n">long</span><span class="p">:</span><span class="nb">int</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the overlay for a given place</span>
+
+<span class="sd">        :param z: The zoom level</span>
+<span class="sd">        :type z: int</span>
+<span class="sd">        :param type: The type of place to get</span>
+<span class="sd">        :type type: list</span>
+<span class="sd">        :param width: The width of the overlay</span>
+<span class="sd">        :type width: int</span>
+<span class="sd">        :param height: The height of the overlay</span>
+<span class="sd">        :type height: int</span>
+<span class="sd">        :param lat: The latitude of the location</span>
+<span class="sd">        :type lat: int</span>
+<span class="sd">        :param long: The longitude of the location</span>
+<span class="sd">        :type long: int</span>
+<span class="sd">        :return: The overlay</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/Place/</span><span class="si">{</span><span class="nb">type</span><span class="si">}</span><span class="s2">/overlay/</span><span class="si">{</span><span class="n">z</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">lat</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">long</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">width</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">height</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, wotanut.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -35,6 +35,3 @@ Useful Links
 - `Ko-Fi <https://ko-fi.com/wotanut>`_
 - `Discord Server <https://discord.gg/2w5KSXjhGe>`_
 - `Watch me live stream the code here <https://www.youtube.com/channel/UCIVkp1F5JSyE0IKALyPW5sg>`_
-
-.. warning:: 
-   This page could be better

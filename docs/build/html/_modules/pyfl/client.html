@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyfl.client &mdash; pyfl 0.0.9 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> pyfl
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">pyfl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyfl</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      <li>pyfl.client</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for pyfl.client</h1><div class="highlight"><pre>
+<span></span><span class="c1"># required imports</span>
+<span class="kn">from</span> <span class="nn">multiprocessing.resource_sharer</span> <span class="kn">import</span> <span class="n">stop</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="c1"># local imports</span>
+<span class="kn">from</span> <span class="nn">.errors</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.helper</span> <span class="kn">import</span> <span class="n">Helper</span>
+<span class="kn">from</span> <span class="nn">.accident</span> <span class="kn">import</span> <span class="n">Accident</span>
+<span class="kn">from</span> <span class="nn">.air</span> <span class="kn">import</span> <span class="n">AirQuality</span>
+<span class="kn">from</span> <span class="nn">.bikePoint</span> <span class="kn">import</span> <span class="n">bike</span>
+<span class="kn">from</span> <span class="nn">.cabWise</span> <span class="kn">import</span> <span class="n">cab</span>
+<span class="kn">from</span> <span class="nn">.journeys</span> <span class="kn">import</span> <span class="n">journeys</span>
+<span class="kn">from</span> <span class="nn">.mode</span> <span class="kn">import</span> <span class="n">Mode</span>
+<span class="kn">from</span> <span class="nn">.occupancy</span> <span class="kn">import</span> <span class="n">Occupancy</span>
+<span class="kn">from</span> <span class="nn">.place</span> <span class="kn">import</span> <span class="n">Place</span>
+<span class="kn">from</span> <span class="nn">.road</span> <span class="kn">import</span> <span class="n">Road</span>
+<span class="kn">from</span> <span class="nn">.search</span> <span class="kn">import</span> <span class="n">Search</span>
+<span class="kn">from</span> <span class="nn">.stop</span> <span class="kn">import</span> <span class="n">Stop</span>
+<span class="kn">from</span> <span class="nn">.travel</span> <span class="kn">import</span> <span class="n">Travel</span>
+<span class="kn">from</span> <span class="nn">.tube</span> <span class="kn">import</span> <span class="n">LU</span>
+<span class="kn">from</span> <span class="nn">.vehicle</span> <span class="kn">import</span> <span class="n">Vehicle</span>
+
+
+<div class="viewcode-block" id="client"><a class="viewcode-back" href="../../pyfl.html#pyfl.client.client">[docs]</a><span class="k">class</span> <span class="nc">client</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot; Synchronous client class &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">api_key</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates the client object</span>
+<span class="sd">        </span>
+<span class="sd">        :param kinda: str</span>
+<span class="sd">        :type kind: str</span>
+<span class="sd">        :raise errors.invalid_api_key: If the API key is invalid</span>
+<span class="sd">        :return: client object</span>
+<span class="sd">        :rtpe: object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="n">api_key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tube</span> <span class="o">=</span> <span class="n">LU</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">helper</span> <span class="o">=</span> <span class="n">Helper</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">accident</span> <span class="o">=</span> <span class="n">Accident</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">AirQuality</span> <span class="o">=</span> <span class="n">AirQuality</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bike</span> <span class="o">=</span> <span class="n">bike</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cab</span> <span class="o">=</span> <span class="n">cab</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">journey</span> <span class="o">=</span> <span class="n">journeys</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">Mode</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">occupancy</span> <span class="o">=</span> <span class="n">Occupancy</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">place</span> <span class="o">=</span> <span class="n">Place</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">search</span> <span class="o">=</span> <span class="n">Search</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vehicle</span> <span class="o">=</span> <span class="n">Vehicle</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop</span> <span class="o">=</span> <span class="n">Stop</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">travel</span> <span class="o">=</span> <span class="n">Travel</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vehicle</span> <span class="o">=</span> <span class="n">Vehicle</span><span class="p">()</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, wotanut.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

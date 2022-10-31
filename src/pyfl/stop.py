@@ -6,3 +6,5 @@ class Stop():
     def __init__(self):
         """Initialises the stop class"""
         pass
+
+    

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyfl.journeys &mdash; pyfl 0.0.9 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> pyfl
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">pyfl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyfl</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      <li>pyfl.journeys</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for pyfl.journeys</h1><div class="highlight"><pre>
+<span></span><span class="c1"># local imports</span>
+<span class="kn">from</span> <span class="nn">ast</span> <span class="kn">import</span> <span class="n">Str</span>
+<span class="kn">from</span> <span class="nn">.errors</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.helper</span> <span class="kn">import</span> <span class="n">Helper</span>
+
+<div class="viewcode-block" id="journeys"><a class="viewcode-back" href="../../pyfl.html#pyfl.journeys.journeys">[docs]</a><span class="k">class</span> <span class="nc">journeys</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot; Journey class&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Initialise the Journey class &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+<div class="viewcode-block" id="journeys.get_available_modes"><a class="viewcode-back" href="../../pyfl.html#pyfl.journeys.journeys.get_available_modes">[docs]</a>    <span class="k">def</span> <span class="nf">get_available_modes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">        Get&#39;s a list of all the available modes of transport</span>
+
+<span class="sd">        :return: The available modes of transport.</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/Journey/Meta/Modes&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="journeys.perform_journey"><a class="viewcode-back" href="../../pyfl.html#pyfl.journeys.journeys.perform_journey">[docs]</a>    <span class="k">def</span> <span class="nf">perform_journey</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fromcoord</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">tocoord</span><span class="p">:</span><span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;&quot;</span>
+<span class="sd">        Perform a journey between two points, note: there are many more parameters that need to be added to this function at a later date. Please refer to the docs for more information (https://api.tfl.gov.uk/swagger/ui/index.html?url=/swagger/docs/v1#!/Journey/Journey_JourneyResults).</span>
+
+<span class="sd">        :param fromcoord: The starting location</span>
+<span class="sd">        :type fromcoord: str</span>
+<span class="sd">        :param tocoord: The destination</span>
+<span class="sd">        :type tocoord: str</span>
+<span class="sd">        :return: The journey</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/Journey/JourneyResults/</span><span class="si">{</span><span class="n">fromcoord</span><span class="si">}</span><span class="s2">/to/</span><span class="si">{</span><span class="n">tocoord</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, wotanut.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
