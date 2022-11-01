@@ -76,8 +76,137 @@
     <span class="sd">&quot;&quot;&quot; Stop class &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Initialises the stop class&quot;&quot;&quot;</span>
-        <span class="k">pass</span></div>
+        <span class="k">pass</span>
 
+<div class="viewcode-block" id="Stop.get_stop_catagories"><a class="viewcode-back" href="../../pyfl.html#pyfl.stop.Stop.get_stop_catagories">[docs]</a>    <span class="k">def</span> <span class="nf">get_stop_catagories</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a list of all available stop catagories</span>
+
+<span class="sd">        :return: A list of all available stop catagories</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="s2">&quot;/StopPoint/Meta/Categories&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Stop.get_stop_types"><a class="viewcode-back" href="../../pyfl.html#pyfl.stop.Stop.get_stop_types">[docs]</a>    <span class="k">def</span> <span class="nf">get_stop_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a list of all available stop types</span>
+
+<span class="sd">        :return: A list of all available stop types</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="s2">&quot;/StopPoint/Meta/StopTypes&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Stop.get_stop_modes"><a class="viewcode-back" href="../../pyfl.html#pyfl.stop.Stop.get_stop_modes">[docs]</a>    <span class="k">def</span> <span class="nf">get_stop_modes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a list of all available stop modes</span>
+
+<span class="sd">        :return: A list of all available stop modes</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="s2">&quot;/StopPoint/Meta/Modes&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Stop.get_stop_by_id"><a class="viewcode-back" href="../../pyfl.html#pyfl.stop.Stop.get_stop_by_id">[docs]</a>    <span class="k">def</span> <span class="nf">get_stop_by_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">stopID</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span><span class="n">includeCrowding</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a stop by its ID</span>
+
+<span class="sd">        :param stopID: A comma-separated list of stop point ids (station naptan code e.g. 940GZZLUASL). Max. approx. 20 ids. You can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name.</span>
+<span class="sd">        :type stopID: str</span>
+<span class="sd">        :param includeCrowding: Include the crowding data (static). To Filter further use: /StopPoint/{ids}/Crowding/{line} (optional, default to False)</span>
+<span class="sd">        :type includeCrowding: bool</span>
+<span class="sd">        :return: The stop</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/StopPoint/</span><span class="si">{</span><span class="n">stopID</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Stop.get_place_by_id"><a class="viewcode-back" href="../../pyfl.html#pyfl.stop.Stop.get_place_by_id">[docs]</a>    <span class="k">def</span> <span class="nf">get_place_by_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">placeID</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span><span class="n">placeType</span><span class="p">:</span><span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a place by its ID</span>
+
+<span class="sd">        :param placeID: A naptan id for a stop point (station naptan code e.g. 940GZZLUASL).</span>
+<span class="sd">        :type placeID: str</span>
+<span class="sd">        :param placeType: A comcomma-separated value representing the place types</span>
+<span class="sd">        :type placeType: str</span>
+<span class="sd">        :return: The place</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/StopPoint/</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">/placeTypes?placeType=</span><span class="si">{</span><span class="n">placeType</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="Stop.get_crowding_data"><a class="viewcode-back" href="../../pyfl.html#pyfl.stop.Stop.get_crowding_data">[docs]</a>    <span class="k">def</span> <span class="nf">get_crowding_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">placeID</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span><span class="n">line</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="n">direction</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets all the Crowding data (static) for the StopPointId, plus crowding data for a given line and optionally a particular direction.</span>
+
+<span class="sd">        :param placeID: The Naptan id of the stop</span>
+<span class="sd">        :type placeID: str</span>
+<span class="sd">        :param line: A particular line e.g. victoria, circle, northern etc. Optionally you can use in helper.victora (optional, default to None)</span>
+<span class="sd">        :type line: str</span>
+<span class="sd">        :param direction: The direction of travel. Can be inbound or outbound. (optional, default to None)</span>
+<span class="sd">        :type direction: str</span>
+<span class="sd">        :return: The crowding data</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/StopPoint/</span><span class="si">{</span><span class="n">placeID</span><span class="si">}</span><span class="s2">/Crowding/</span><span class="si">{</span><span class="n">line</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">direction</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Stop.get_all_stop_points_by_type"><a class="viewcode-back" href="../../pyfl.html#pyfl.stop.Stop.get_all_stop_points_by_type">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_stop_points_by_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="nb">type</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span><span class="n">page</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns all stop points of a given type</span>
+
+<span class="sd">        :param type: A comma-separated list of the types to return. Max. approx. 12 types. A list of valid stop types can be obtained from the StopPoint/meta/stoptypes endpoint.</span>
+<span class="sd">        :type type: str</span>
+<span class="sd">        :param page: The page number to return (optional, default to None)</span>
+<span class="sd">        :type page: int</span>
+<span class="sd">        :return: All stop points of a given type</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">page</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/StopPoint/Type/</span><span class="si">{</span><span class="nb">type</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/StopPoint/Type/</span><span class="si">{</span><span class="nb">type</span><span class="si">}</span><span class="s2">/page/</span><span class="si">{</span><span class="n">page</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="Stop.get_service_type_of_stoppoint"><a class="viewcode-back" href="../../pyfl.html#pyfl.stop.Stop.get_service_type_of_stoppoint">[docs]</a>    <span class="k">def</span> <span class="nf">get_service_type_of_stoppoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="nb">id</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span><span class="n">lineID</span><span class="o">=</span><span class="p">[],</span><span class="n">modes</span><span class="o">=</span><span class="p">[]):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the service types for a given stoppoint</span>
+
+<span class="sd">        :param id: The Naptan id of the stop</span>
+<span class="sd">        :type id: str</span>
+<span class="sd">        :param lineID: A particular line e.g. victoria, circle, northern etc. Optionally you can use in helper.victora (optional, default to None)</span>
+<span class="sd">        :type lineID: array</span>
+<span class="sd">        :param modes: The modes which the lines are relevant to</span>
+<span class="sd">        :return: The service types for a given stoppoint</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/StopPoint/</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">/ServiceTypes?lineId=</span><span class="si">{</span><span class="n">lineID</span><span class="si">}</span><span class="s2">&amp;modes=</span><span class="si">{</span><span class="n">modes</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Stop.get_arrival_predictions"><a class="viewcode-back" href="../../pyfl.html#pyfl.stop.Stop.get_arrival_predictions">[docs]</a>    <span class="k">def</span> <span class="nf">get_arrival_predictions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">stopID</span><span class="p">:</span><span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the list of arrival predictions for the given stop point id</span>
+
+<span class="sd">        :param stopID: A StopPoint id (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)</span>
+<span class="sd">        :type stopID: str</span>
+<span class="sd">        :return: The list of arrival predictions for the given stop point id</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/StopPoint/</span><span class="si">{</span><span class="n">stopID</span><span class="si">}</span><span class="s2">/Arrivals&quot;</span>
+
+        <span class="c1"># must also get it seperatly from another endpoint for the elizabeth, thameslink and overground lines as they are not included in the above endpoint</span>
+        <span class="c1"># https://api.tfl.gov.uk/swagger/ui/index.html?url=/swagger/docs/v1#!/StopPoint/StopPoint_ArrivalDepartures</span>
+
+        <span class="n">elizabeth</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/StopPoint/</span><span class="si">{</span><span class="n">stopID</span><span class="si">}</span><span class="s2">/ArrivalDepartures&quot;</span>
+        <span class="n">eliz</span> <span class="o">=</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">elizabeth</span><span class="p">))</span>
+        <span class="n">everythingElse</span> <span class="o">=</span> <span class="n">Helper</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Helper</span><span class="o">.</span><span class="n">make_raw_api_call</span><span class="p">(</span><span class="n">endpoint</span><span class="p">))</span>
+        
+        <span class="k">return</span> <span class="n">everythingElse</span><span class="p">[</span><span class="s2">&quot;arrivals&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">eliz</span><span class="p">[</span><span class="s2">&quot;arrivals&quot;</span><span class="p">])</span></div></div>
+
+    <span class="c1"># https://api.tfl.gov.uk/swagger/ui/index.html?url=/swagger/docs/v1#!/StopPoint/StopPoint_ReachableFrom</span>
+
+    <span class="c1">### I got to here before I had to go, so if someone would like to finish off the rest of this file that would be great :)</span>
     
 </pre></div>
 

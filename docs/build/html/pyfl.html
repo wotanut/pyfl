@@ -1044,6 +1044,167 @@ Perform a journey between two points, note: there are many more parameters that 
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Stop</span></span><a class="reference internal" href="_modules/pyfl/stop.html#Stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyfl.stop.Stop" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Stop class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.stop.Stop.get_stop_catagories">
+<span class="sig-name descname"><span class="pre">get_stop_catagories</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyfl/stop.html#Stop.get_stop_catagories"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyfl.stop.Stop.get_stop_catagories" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of all available stop catagories</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list of all available stop catagories</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.stop.Stop.get_stop_types">
+<span class="sig-name descname"><span class="pre">get_stop_types</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyfl/stop.html#Stop.get_stop_types"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyfl.stop.Stop.get_stop_types" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of all available stop types</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list of all available stop types</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.stop.Stop.get_stop_modes">
+<span class="sig-name descname"><span class="pre">get_stop_modes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyfl/stop.html#Stop.get_stop_modes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyfl.stop.Stop.get_stop_modes" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of all available stop modes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list of all available stop modes</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.stop.Stop.get_stop_by_id">
+<span class="sig-name descname"><span class="pre">get_stop_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stopID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">includeCrowding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyfl/stop.html#Stop.get_stop_by_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyfl.stop.Stop.get_stop_by_id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a stop by its ID</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stopID</strong> (<em>str</em>) – A comma-separated list of stop point ids (station naptan code e.g. 940GZZLUASL). Max. approx. 20 ids. You can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name.</p></li>
+<li><p><strong>includeCrowding</strong> (<em>bool</em>) – Include the crowding data (static). To Filter further use: /StopPoint/{ids}/Crowding/{line} (optional, default to False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The stop</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.stop.Stop.get_place_by_id">
+<span class="sig-name descname"><span class="pre">get_place_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">placeID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">placeType</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyfl/stop.html#Stop.get_place_by_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyfl.stop.Stop.get_place_by_id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a place by its ID</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>placeID</strong> (<em>str</em>) – A naptan id for a stop point (station naptan code e.g. 940GZZLUASL).</p></li>
+<li><p><strong>placeType</strong> (<em>str</em>) – A comcomma-separated value representing the place types</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The place</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.stop.Stop.get_crowding_data">
+<span class="sig-name descname"><span class="pre">get_crowding_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">placeID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyfl/stop.html#Stop.get_crowding_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyfl.stop.Stop.get_crowding_data" title="Permalink to this definition"></a></dt>
+<dd><p>Gets all the Crowding data (static) for the StopPointId, plus crowding data for a given line and optionally a particular direction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>placeID</strong> (<em>str</em>) – The Naptan id of the stop</p></li>
+<li><p><strong>line</strong> (<em>str</em>) – A particular line e.g. victoria, circle, northern etc. Optionally you can use in helper.victora (optional, default to None)</p></li>
+<li><p><strong>direction</strong> (<em>str</em>) – The direction of travel. Can be inbound or outbound. (optional, default to None)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The crowding data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.stop.Stop.get_all_stop_points_by_type">
+<span class="sig-name descname"><span class="pre">get_all_stop_points_by_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyfl/stop.html#Stop.get_all_stop_points_by_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyfl.stop.Stop.get_all_stop_points_by_type" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all stop points of a given type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<em>str</em>) – A comma-separated list of the types to return. Max. approx. 12 types. A list of valid stop types can be obtained from the StopPoint/meta/stoptypes endpoint.</p></li>
+<li><p><strong>page</strong> (<em>int</em>) – The page number to return (optional, default to None)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>All stop points of a given type</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.stop.Stop.get_service_type_of_stoppoint">
+<span class="sig-name descname"><span class="pre">get_service_type_of_stoppoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineID</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyfl/stop.html#Stop.get_service_type_of_stoppoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyfl.stop.Stop.get_service_type_of_stoppoint" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the service types for a given stoppoint</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>str</em>) – The Naptan id of the stop</p></li>
+<li><p><strong>lineID</strong> (<em>array</em>) – A particular line e.g. victoria, circle, northern etc. Optionally you can use in helper.victora (optional, default to None)</p></li>
+<li><p><strong>modes</strong> – The modes which the lines are relevant to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The service types for a given stoppoint</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyfl.stop.Stop.get_arrival_predictions">
+<span class="sig-name descname"><span class="pre">get_arrival_predictions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stopID</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyfl/stop.html#Stop.get_arrival_predictions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyfl.stop.Stop.get_arrival_predictions" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the list of arrival predictions for the given stop point id</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>stopID</strong> (<em>str</em>) – A StopPoint id (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The list of arrival predictions for the given stop point id</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
